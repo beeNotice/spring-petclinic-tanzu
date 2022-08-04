@@ -2,10 +2,10 @@ apiVersion: carto.run/v1alpha1
 kind: Workload
 metadata:
   namespace: dev
-  name: spring-petclinic-tanzu
+  name: spring-petclinic-vets-service
   labels:
     apps.tanzu.vmware.com/workload-type: web
-    app.kubernetes.io/part-of: spring-petclinic-tanzu
+    app.kubernetes.io/part-of: spring-petclinic-vets-service
   annotations:
     autoscaling.knative.dev/minScale: "1"
 spec:
@@ -15,12 +15,6 @@ spec:
       ref:
         branch: main
     subPath: spring-petclinic-vets-service
-  serviceClaims:
-  - name: postgresql
-    ref:
-      apiVersion: sql.tanzu.vmware.com/v1
-      kind: Postgres
-      name: spring-petclinic-vets-service
   build:
     env:
     - name: BP_JVM_VERSION

@@ -5,7 +5,7 @@ spring:
     active: local
   cloud:
     config:
-      # Do not rely on config server 
+      # Do not rely on config server
       enabled: false
   jpa:
     open-in-view: false
