@@ -34,14 +34,6 @@ tanzu apps workload get spring-petclinic-vets -n dev
 # Delete
 tanzu apps workload delete spring-petclinic-vets -n dev --yes
 ```
-## Day 2
-
-Update the configuration of the spring-petclinic-vets service
-
-```bash
-kubectl apply -f $TANZU_PETCLINIC_FILES_PATH/k8s/02-configmap-spring-petclinic-vets.yaml
-```
-
 ## TODO
 
   * Add tests
