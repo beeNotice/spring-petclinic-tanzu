@@ -1,6 +1,6 @@
 spring:
   application:
-    name: spring-petclinic-vets-service
+    name: spring-petclinic-vets
   profiles:
     active: local
   cloud:
