@@ -7,4 +7,4 @@ spec:
     displayName: Tanzu User
     email: user@tanzu.com
     picture: https://avatars.dicebear.com/api/avataaars/guest@example.com.svg?background=%23fff
-  memberOf: [tanzu-team, spring-petclinic-team]
+  memberOf: [tanzu-team]

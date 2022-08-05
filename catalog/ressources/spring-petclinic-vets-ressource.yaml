@@ -5,5 +5,5 @@ metadata:
   description: Stores vets details
 spec:
   type: database
-  owner: spring-petclinic-team
+  owner: tanzu-team
   system: spring-petclinic-system

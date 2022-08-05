@@ -22,6 +22,5 @@ metadata:
   description: Tanzu Group Location
 spec:
   targets:
-    - ./spring-petclinic-team.yaml
     - ./tanzu-team.yaml
     - ./tanzu-user.yaml

@@ -14,6 +14,6 @@ spec:
   type: service
   lifecycle: production
   system: spring-petclinic-system
-  owner: spring-petclinic-team
+  owner: tanzu-team
   dependsOn:
     - resource:default/spring-petclinic-vets-db
