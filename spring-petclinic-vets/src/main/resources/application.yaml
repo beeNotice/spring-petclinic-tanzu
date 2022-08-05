@@ -3,10 +3,6 @@ spring:
     name: spring-petclinic-vets
   profiles:
     active: local
-  cloud:
-    config:
-      # Do not rely on config server
-      enabled: false
   jpa:
     open-in-view: false
     show-sql: false
@@ -24,4 +20,9 @@ management:
   metrics:
     export:
       wavefront:
-        enabled: false
+        uri: proxy://wavefront-proxy.wavefront.svc.cluster.local:2878
+
+wavefront:
+  application:
+    name: spring-petclinic-tanzu
+    service: spring-petclinic-vets

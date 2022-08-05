@@ -4,3 +4,9 @@ spring:
     username: pgappuser
     password: pgappuser
     driverClassName: org.postgresql.Driver
+
+management:
+  metrics:
+    export:
+      wavefront:
+        enabled: false

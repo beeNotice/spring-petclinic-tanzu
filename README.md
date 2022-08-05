@@ -1,3 +1,19 @@
+## Prerequisites
+
+### Tanzu Observability by Wavefront
+
+```bash
+kubectl create ns wavefront
+
+kubectl create secret generic wavefront -n wavefront \
+  --from-literal=wavefront-url=https://wavefront.surf \
+  --from-literal=wavefront-api-token=c25bb033-xxxx-xxxx-xxxx-570d3dc23bea
+
+kubectl apply -f $TANZU_PETCLINIC_FILES_PATH/k8s/wavefront.yaml
+```
+
+https://wavefront.surf/us/KvmlkMFhTh
+
 ## Develop
 
 ### OpenAPI
@@ -6,18 +22,8 @@
 
 ## Deploy
 
-
 ```bash
-
-# Iterate - From local path
-# TODO fix it, there is a NotOwned status on the Workload
-tanzu apps workload apply -f $TANZU_PETCLINIC_FILES_PATH/spring-petclinic-vets/config/workload.yaml \
-  --local-path $TANZU_PETCLINIC_FILES_PATH/spring-petclinic-vets \
-  --source-image fmartin.azurecr.io/fmartin/tanzu-app-tap-source \
-  --namespace dev \
-  --yes
-
-# Deploy - From Git repository
+# Deploy
 kubectl apply -f $TANZU_PETCLINIC_FILES_PATH/spring-petclinic-vets/config/workload.yaml
 
 # Follow

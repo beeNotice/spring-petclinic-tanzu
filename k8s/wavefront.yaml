@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: wavefront-proxy
+    name: wavefront-proxy
+  name: wavefront-proxy
+  namespace: wavefront
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wavefront-proxy
+  template:
+    metadata:
+      labels:
+        app: wavefront-proxy
+    spec:
+      containers:
+      - name: wavefront-proxy
+        image: wavefronthq/proxy:latest
+        imagePullPolicy: Always
+        env:
+        - name: WAVEFRONT_URL
+          valueFrom:
+             secretKeyRef:
+               name: wavefront
+               key: wavefront-url
+        - name: WAVEFRONT_TOKEN
+          valueFrom:
+             secretKeyRef:
+               name: wavefront
+               key: wavefront-api-token
+        ports:
+        - containerPort: 2878
+          protocol: TCP
+        securityContext:
+          privileged: false
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: wavefront-proxy
+  labels:
+    app: wavefront-proxy
+  namespace: wavefront
+spec:
+  ports:
+  - name: wavefront
+    port: 2878
+    protocol: TCP
+  selector:
+    app: wavefront-proxy
