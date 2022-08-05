@@ -5,7 +5,7 @@ metadata:
   description: Spring Petclinic catalog
 spec:
   targets:
-    - ./groups/tanzu-org.yaml
+    - ./groups/tanzu-team.yaml
     - ./domains/tanzu-domain.yaml
     - ./systems/spring-petclinic-system.yaml
     - ./components/spring-petclinic-vets-service.yaml
