@@ -1,0 +1,11 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: spring-petclinic-vets
+  namespace: dev
+data:
+  application.yaml: |-
+    management:
+      endpoint:
+        health:
+          show-details: never

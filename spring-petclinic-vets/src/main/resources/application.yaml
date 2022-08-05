@@ -3,6 +3,14 @@ spring:
     name: spring-petclinic-vets
   profiles:
     active: local
+  cloud:
+    config:
+      enabled: false
+    kubernetes:
+      config:
+        name: app-configuration
+        sources:
+         - name: ${spring.application.name}
   jpa:
     open-in-view: false
     show-sql: false

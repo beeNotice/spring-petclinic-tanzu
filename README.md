@@ -9,7 +9,7 @@ kubectl create secret generic wavefront -n wavefront \
   --from-literal=wavefront-url=https://wavefront.surf \
   --from-literal=wavefront-api-token=c25bb033-xxxx-xxxx-xxxx-570d3dc23bea
 
-kubectl apply -f $TANZU_PETCLINIC_FILES_PATH/k8s/wavefront.yaml
+kubectl apply -f $TANZU_PETCLINIC_FILES_PATH/k8s/01-wavefront.yaml
 ```
 
 https://wavefront.surf/us/KvmlkMFhTh
@@ -33,6 +33,13 @@ tanzu apps workload get spring-petclinic-vets -n dev
 
 # Delete
 tanzu apps workload delete spring-petclinic-vets -n dev --yes
+```
+## Day 2
+
+Update the configuration of the spring-petclinic-vets service
+
+```bash
+kubectl apply -f $TANZU_PETCLINIC_FILES_PATH/k8s/02-configmap-spring-petclinic-vets.yaml
 ```
 
 ## TODO

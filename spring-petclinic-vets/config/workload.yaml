@@ -27,4 +27,4 @@ spec:
       value: "17.*"
   env:
   - name: SPRING_PROFILES_ACTIVE
-    value: "dev"
+    value: "cloud"
