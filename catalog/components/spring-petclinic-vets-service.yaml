@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: spring-petclinic-vets-service
+  description: Spring Petclinic Vets Service
+  tags:
+    - java
+    - spring
+    - petclinic
+  annotations:
+    backstage.io/kubernetes-label-selector: app.kubernetes.io/part-of=spring-petclinic-vets-service
+    'backstage.io/techdocs-ref': dir:.
+spec:
+  type: service
+  lifecycle: production
+  system: spring-petclinic-system
+  owner: spring-petclinic-team
+  dependsOn:
+    - resource:default/spring-petclinic-vets-db

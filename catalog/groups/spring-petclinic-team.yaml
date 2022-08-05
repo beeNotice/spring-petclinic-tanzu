@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: spring-petclinic-team
+  description: Spring Petclinic Team
+spec:
+  type: team
+  profile:
+    displayName: Spring Petclinic Team
+    email: spring-petclinic@tanzu.com
+    picture: https://avatars.dicebear.com/api/identicon/team-b@example.com.svg?background=%23fff&margin=25
+  parent: tanzu-org
+  children: []
+

@@ -1,6 +1,0 @@
-spring:
-  datasource:
-    url: jdbc:postgresql://tanzu-app-db.dev.svc.cluster.local:5432/spring-petclinic-vets-service
-    username: pgappuser
-    password: AM33c6K58GSFeW7gGq1jwK3Pyb1V4r
-    driverClassName: org.postgresql.Driver

@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: spring-petclinic-vets-db
+  description: Stores vets details
+spec:
+  type: database
+  owner: spring-petclinic-team
+  system: spring-petclinic-system

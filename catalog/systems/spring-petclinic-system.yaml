@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: spring-petclinic-system
+  description: Spring Petclinic System
+spec:
+  owner: spring-petclinic-team
+  domain: tanzu-domain

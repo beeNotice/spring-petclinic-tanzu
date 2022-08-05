@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: spring-petclinic
+  description: Spring Petclinic catalog
+spec:
+  targets:
+    - ./components/spring-petclinic-vets-service.yaml
+    - ./ressources/spring-petclinic-vets-ressource.yaml
+    - ./groups/tanzu-org.yaml
+    - ./systems/tanzu-app-system.yaml
+    - ./systems/spring-petclinic-system.yaml
+    - ./domains/tanzu-domain.yaml
+    - ./api/petstore.yaml

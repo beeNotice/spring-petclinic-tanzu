@@ -1,0 +1,26 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: tanzu-org
+  description: Tanzu Organization
+  links:
+    - url: https://tanzu.vmware.com/support
+      title: Tanzu Support Website
+spec:
+  type: organization
+  profile:
+    displayName: Tanzu Organization
+    email: tanzu@vmware.com
+    picture: https://avatars.dicebear.com/api/identicon/info@example.com.svg?background=%23fff&margin=25
+  children: [tanzu-team, spring-petclinic-team]
+---
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: tanzu-group
+  description: Tanzu Group Location
+spec:
+  targets:
+    - ./spring-petclinic-team.yaml
+    - ./tanzu-team.yaml
+    - ./tanzu-user.yaml
