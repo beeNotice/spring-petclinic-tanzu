@@ -4,5 +4,5 @@ metadata:
   name: spring-petclinic-system
   description: Spring Petclinic System
 spec:
-  owner: spring-petclinic-team
+  owner: tanzu-team
   domain: tanzu-domain
