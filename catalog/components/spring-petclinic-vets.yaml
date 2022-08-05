@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: spring-petclinic-vets-service
-  description: Spring Petclinic Vets Service
+  name: spring-petclinic-vets
+  description: Spring Petclinic Vets
   tags:
     - java
     - spring

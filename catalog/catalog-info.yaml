@@ -8,5 +8,5 @@ spec:
     - ./groups/tanzu-team.yaml
     - ./domains/tanzu-domain.yaml
     - ./systems/spring-petclinic-system.yaml
-    - ./components/spring-petclinic-vets-service.yaml
+    - ./components/spring-petclinic-vets.yaml
     - ./ressources/spring-petclinic-vets-ressource.yaml
