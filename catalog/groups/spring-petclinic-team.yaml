@@ -9,6 +9,6 @@ spec:
     displayName: Spring Petclinic Team
     email: spring-petclinic@tanzu.com
     picture: https://avatars.dicebear.com/api/identicon/team-b@example.com.svg?background=%23fff&margin=25
-  parent: tanzu-org
+  parent: tanzu-team
   children: []
 

@@ -13,7 +13,7 @@ spec:
     email: tanzu@vmware.com
     picture: https://avatars.dicebear.com/api/identicon/info@example.com.svg?background=%23fff&margin=25
   parent: default-org
-  children: [tanzu-team, spring-petclinic-team]
+  children: [tanzu-team]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Location
