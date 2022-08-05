@@ -1,6 +1,0 @@
-spring:
-  datasource:
-    url: jdbc:postgresql://spring-petclinic-vets-service.fmartin.svc.cluster.local:5432/spring-petclinic-vets-service
-    username: pgappuser
-    password: hc8nRiz7RLG9e30PC97a74p2oxEgIN
-    driverClassName: org.postgresql.Driver

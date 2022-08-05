@@ -19,6 +19,8 @@ spec:
     env:
     - name: BP_JVM_VERSION
       value: "17.*"
+    - name: BP_MAVEN_BUILT_MODULE
+      value: "spring-petclinic-vets-service"
   env:
   - name: SPRING_PROFILES_ACTIVE
-    value: "prod"
+    value: "dev"
