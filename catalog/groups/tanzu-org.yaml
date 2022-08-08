@@ -17,7 +17,7 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
-  name: default-group
+  name: tanzu-group
   description: A Default Group Location
 spec:
   targets:
