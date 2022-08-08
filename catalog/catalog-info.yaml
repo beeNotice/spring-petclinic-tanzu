@@ -10,3 +10,4 @@ spec:
     - ./systems/spring-petclinic-system.yaml
     - ./components/spring-petclinic-vets.yaml
     - ./ressources/spring-petclinic-vets-ressource.yaml
+    - ./api/spring-petclinic-api.yaml

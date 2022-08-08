@@ -19,6 +19,7 @@ https://wavefront.surf/us/KvmlkMFhTh
 ### OpenAPI
   * http://localhost:8080/swagger-ui/index.html
   * http://localhost:8080/v3/api-docs
+  * http://localhost:8080/v3/api-docs.yaml
 
 ## Deploy
 
@@ -36,5 +37,3 @@ tanzu apps workload delete spring-petclinic-vets -n dev --yes
 ```
 ## TODO
 
-  * Add tests
-  * Add catalog : https://github.com/dektlong/dekt-devx-demo/blob/main/config-templates/profiles/tap-view.yaml

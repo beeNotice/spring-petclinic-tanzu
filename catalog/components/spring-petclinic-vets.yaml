@@ -17,3 +17,5 @@ spec:
   owner: tanzu-team
   dependsOn:
     - resource:default/spring-petclinic-vets-db
+  providesApis:
+    - spring-petclinic-vets-apis
