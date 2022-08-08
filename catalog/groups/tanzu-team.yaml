@@ -9,7 +9,7 @@ spec:
     displayName: Tanzu Team
     email: tanzu-team@tanzu.com
     picture: https://avatars.dicebear.com/api/identicon/team-c@example.com.svg?background=%23fff&margin=25
-  parent: default-org
+  parent: tanzu-org
   children: []
-  members: [guest]
+  members: [tanzu-user]
 
