@@ -24,16 +24,19 @@ https://wavefront.surf/us/KvmlkMFhTh
 ## Deploy
 
 ```bash
+# App name : spring-petclinic-vets, spring-petclinic-customers, spring-petclinic-visits
+APP_NAME=spring-petclinic-customers
+
 # Deploy
 kubectl apply -f $TANZU_PETCLINIC_FILES_PATH/spring-petclinic-vets/config/workload.yaml
 
 # Follow
-tanzu apps workload tail spring-petclinic-vets -n dev
-kp build logs spring-petclinic-vets -n dev
-tanzu apps workload get spring-petclinic-vets -n dev
+tanzu apps workload tail $APP_NAME -n dev
+kp build logs $APP_NAME -n dev
+tanzu apps workload get $APP_NAME -n dev
 
 # Delete
-tanzu apps workload delete spring-petclinic-vets -n dev --yes
+tanzu apps workload delete $APP_NAME -n dev --yes
 ```
 ## TODO
 

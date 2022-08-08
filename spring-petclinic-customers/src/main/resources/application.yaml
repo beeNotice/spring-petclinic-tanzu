@@ -25,4 +25,4 @@ management:
 wavefront:
   application:
     name: spring-petclinic-tanzu
-    service: spring-petclinic-customers
+    service: ${spring.application.name}

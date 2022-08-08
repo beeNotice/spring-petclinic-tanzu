@@ -17,3 +17,13 @@ spec:
   type: database
   owner: tanzu-team
   system: spring-petclinic-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: spring-petclinic-visits-db
+  description: Visits details
+spec:
+  type: database
+  owner: tanzu-team
+  system: spring-petclinic-system
