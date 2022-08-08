@@ -19,6 +19,9 @@ CREATE TABLE IF NOT EXISTS vet_specialties (
   CONSTRAINT unique_vet_specialty UNIQUE (vet_id, specialty_id)
 );
 
+CREATE INDEX idx_vet_lastname ON vets(last_name);
+CREATE INDEX idx_specialty_name ON specialties(name);
+
 INSERT INTO vets VALUES (1, 'James', 'Carter');
 INSERT INTO vets VALUES (2, 'Helen', 'Leary');
 INSERT INTO vets VALUES (3, 'Linda', 'Douglas');

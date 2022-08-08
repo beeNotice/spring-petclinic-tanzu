@@ -10,3 +10,16 @@ spec:
   system: spring-petclinic-system
   definition:
     $text: https://github.com/beeNotice/spring-petclinic-tanzu/tree/main/catalog/apis/openapi/spring-petclinic-vets-openapi.yaml
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: spring-petclinic-customers-apis
+  description: APIs to interact with spring-petclinic-customers
+spec:
+  type: openapi
+  lifecycle: integration
+  owner: tanzu-team
+  system: spring-petclinic-system
+  definition:
+    $text: https://github.com/beeNotice/spring-petclinic-tanzu/tree/main/catalog/apis/openapi/spring-petclinic-customers-openapi.yaml

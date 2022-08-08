@@ -12,6 +12,7 @@
 
 	<modules>
 		<module>spring-petclinic-vets</module>
+		<module>spring-petclinic-customers</module>
 	</modules>
 
 </project>

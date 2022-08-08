@@ -12,10 +12,10 @@
 	</parent>
 
 	<groupId>org.springframework.samples.petclinic.tanzu</groupId>
-	<artifactId>spring-petclinic-vets</artifactId>
+	<artifactId>spring-petclinic-customers</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-petclinic-vets</name>
-	<description>Spring PetClinic Vets</description>
+	<name>spring-petclinic-customers</name>
+	<description>Spring PetClinic Customers</description>
 
 	<properties>
 		<java.version>17</java.version>

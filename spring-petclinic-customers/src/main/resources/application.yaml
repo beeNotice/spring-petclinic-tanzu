@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: spring-petclinic-customers
+  profiles:
+    active: local
+  jpa:
+    open-in-view: false
+    show-sql: false
+    hibernate:
+      ddl-auto: none
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  metrics:
+    export:
+      wavefront:
+        uri: proxy://wavefront-proxy.wavefront.svc.cluster.local:2878
+
+wavefront:
+  application:
+    name: spring-petclinic-tanzu
+    service: spring-petclinic-customers
