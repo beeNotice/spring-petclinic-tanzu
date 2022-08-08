@@ -22,5 +22,4 @@ metadata:
 spec:
   targets:
     - ./tanzu-team.yaml
-    - ./guest-user.yaml
     - ./tanzu-user.yaml

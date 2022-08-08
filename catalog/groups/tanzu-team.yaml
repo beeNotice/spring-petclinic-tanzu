@@ -12,4 +12,3 @@ spec:
   parent: tanzu-org
   children: []
   members: [guest, tanzu-user]
-
