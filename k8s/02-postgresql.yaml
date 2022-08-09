@@ -1,0 +1,18 @@
+#@ load("@ytt:data", "data")
+---
+apiVersion: sql.tanzu.vmware.com/v1
+kind: Postgres
+metadata:
+  name: #@ data.values.db
+  namespace: dev
+spec:
+  storageClassName: default
+  storageSize: 800M
+  monitorStorageClassName: default
+  monitorStorageSize: 1G
+  pgConfig:
+    username: pgadmin
+    appUser: pgappuser
+  postgresVersion:
+    name: postgres-14
+  serviceType: ClusterIP

@@ -63,3 +63,25 @@ spec:
     - resource:default/spring-petclinic-visits-db
   providesApis:
     - spring-petclinic-visits-apis
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: spring-petclinic-api-gateway
+  description: Spring Petclinic API Gateway
+  tags:
+    - java
+    - spring
+    - petclinic
+  annotations:
+    backstage.io/kubernetes-label-selector: app.kubernetes.io/part-of=spring-petclinic-api-gateway
+    'backstage.io/techdocs-ref': dir:.
+spec:
+  type: service
+  lifecycle: production
+  system: spring-petclinic-system
+  owner: tanzu-team
+  dependsOn:
+    - component:default/spring-petclinic-vets
+    - component:default/spring-petclinic-customers-apis
+    - component:default/spring-petclinic-visits-apis

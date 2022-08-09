@@ -40,3 +40,6 @@ tanzu apps workload delete $APP_NAME -n dev --yes
 ```
 ## TODO
 
+  * Accelerator
+  * Apache Benchmark
+  * SSO

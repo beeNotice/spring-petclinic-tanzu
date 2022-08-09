@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: spring-petclinic-api-gateway
+  profiles:
+    active: local
+  cloud:
+    gateway:
+      routes:
+        - id: vets
+          uri: http://spring-petclinic-vets-dev.tanzu.fmartin.tech/
+          predicates:
+            - Path=/api/vet/**
+          filters:
+            - StripPrefix=2
+        - id: visits
+          uri: http://spring-petclinic-visits-dev.tanzu.fmartin.tech/
+          predicates:
+            - Path=/api/visit/**
+          filters:
+            - StripPrefix=2
+        - id: customers
+          uri: http://spring-petclinic-customers-dev.tanzu.fmartin.tech/
+          predicates:
+            - Path=/api/customer/**
+          filters:
+            - StripPrefix=2
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  metrics:
+    export:
+      wavefront:
+        uri: proxy://wavefront-proxy.wavefront.svc.cluster.local:2878
+
+wavefront:
+  application:
+    name: spring-petclinic-tanzu
+    service: ${spring.application.name}
