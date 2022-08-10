@@ -24,8 +24,8 @@ https://wavefront.surf/us/KvmlkMFhTh
 ## Deploy
 
 ```bash
-# App name : spring-petclinic-vets, spring-petclinic-customers, spring-petclinic-visits
-APP_NAME=spring-petclinic-customers
+# App name : spring-petclinic-vets, spring-petclinic-customers, spring-petclinic-visits, spring-petclinic-angular
+APP_NAME=spring-petclinic-angular
 
 # Deploy
 kubectl apply -f $TANZU_PETCLINIC_FILES_PATH/spring-petclinic-vets/config/workload.yaml

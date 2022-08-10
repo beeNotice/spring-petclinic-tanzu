@@ -24,6 +24,12 @@ spring:
             - Path=/api/customer/**
           filters:
             - StripPrefix=2
+        - id: owners
+          uri: http://spring-petclinic-customers-dev.tanzu.fmartin.tech/
+          predicates:
+            - Path=/api/owners/**
+          filters:
+            - StripPrefix=1
 
 management:
   endpoint:
